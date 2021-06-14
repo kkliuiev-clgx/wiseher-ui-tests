@@ -43,7 +43,7 @@ describe('WiseHer UI Tests', function() {
     cy.get('.ant-input-wrapper > .ant-input-affix-wrapper > .ant-input').click();
     cy.wait(500);
     cy.get('.ant-input-wrapper > .ant-input-affix-wrapper > .ant-input').type(email);
-    cy.wait(500);
+    cy.wait(1500);
     cy.get(':nth-child(6) > .ant-space > .ant-space-item > a').click();
     cy.wait(500);
     cy.get('.ant-space > :nth-child(2) > .ant-btn').click({ multiple: true });
