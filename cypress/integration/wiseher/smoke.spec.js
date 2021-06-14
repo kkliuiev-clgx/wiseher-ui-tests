@@ -58,6 +58,7 @@ describe('WiseHer UI Tests', function() {
       cy.get('.ant-card-body > :nth-child(1)').should('have.text', 'Expert Profile')
       cy.get('[style="margin-right: 8px;"] > .ant-btn').click();
       cy.get('#ExpertProfileForm > .ant-alert').should('exist')
+      cy.wait(1000);
       cy.get('#ExpertProfileForm_body').should('have.css','border-color','rgb(255, 77, 79)')
       cy.get(':nth-child(9) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector').should('have.css','border-color','rgb(255, 77, 79)')
       
