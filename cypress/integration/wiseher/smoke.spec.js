@@ -28,6 +28,8 @@ describe('WiseHer UI Tests', function() {
     cy.get('#RegisterForm_confirmPassword').type('qwerty123');
     cy.get('#RegisterForm_tos_and_privacy').click();
     cy.get(':nth-child(1) > .ant-row > .ant-col > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-btn > span').click();
+    cy.wait(1000)
+    cy.get('.ant-typography > .ant-image > .ant-image-img').should('exist')
     })
     
     it('Finds newly created user and makes him an expert', function() {
@@ -59,7 +61,7 @@ describe('WiseHer UI Tests', function() {
       cy.get('[style="margin-right: 8px;"] > .ant-btn').click();
       cy.get('#ExpertProfileForm > .ant-alert').should('exist')
       cy.wait(1000);
-      cy.get('#ExpertProfileForm_body').should('have.css','border-color','rgb(255, 77, 79)')
+      // cy.get('#ExpertProfileForm_body').should('have.css','border-color','rgb(255, 77, 79)')
       cy.get(':nth-child(9) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector').should('have.css','border-color','rgb(255, 77, 79)')
       
     })
