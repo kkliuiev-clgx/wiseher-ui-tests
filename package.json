@@ -1,0 +1,14 @@
+{
+  "name": "wiseher-tests",
+  "version": "1.0.0",
+  "description": "Wiseher tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run ./cypress/integration/wiseher.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.8.0"
+  }
+}
