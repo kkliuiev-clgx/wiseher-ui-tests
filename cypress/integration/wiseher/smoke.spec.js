@@ -64,9 +64,13 @@ describe('WiseHer UI Tests', function() {
       cy.wait(1000);
       // cy.get('#ExpertProfileForm_body').should('have.css','border-color','rgb(255, 77, 79)')
       cy.get(':nth-child(9) > .ant-form-item-control > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector').should('have.css','border-color','rgb(255, 77, 79)')
-      cy.fixture(fileName).then(fileContent=>{cy.get('.ant-upload > .ant-btn').attachFile(fileContent)}
-      cy.get('.ant-modal-footer > .ant-btn-primary > span').click())
-      )
+      cy.get('.ant-upload > .ant-btn').attachFile('pic01.jpg', { subjectType: 'drag-n-drop' });
+      cy.get('.ant-modal-footer > .ant-btn-primary').click();
+      cy.wait(500);
+      cy.get('.ant-notification-notice-message').should('contain.text','File uploaded')
+
+    
+      
 
       
     })
